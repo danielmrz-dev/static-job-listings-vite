@@ -5,7 +5,7 @@ const filterContainer = document.querySelector(".header__filter-items-container"
 const jobListContainer = document.querySelector(".job-list");
 const clearFilterBtn = document.querySelector("[data-clear]");
 
-const API = "https://gist.githubusercontent.com/danielmrz-dev/cd15c968dacc790bc1d4c742865b5108/raw/8de581e6fd3370f2b64685356849120b1463dc8d/gistfile1.txt";
+const API = "https://gist.githubusercontent.com/danielmrz-dev/cd15c968dacc790bc1d4c742865b5108/raw/654abba65aa810ffe165ef7bb8dd5a1305e3f036/gistfile1.txt";
 
 console.log(API);
 
@@ -101,7 +101,7 @@ function addTagFilter() {
         <li class="header__filter-items">
             <span class="header__filter-item">${tag}</span>
             <button class="">
-                <img src="images/icon-remove.svg" alt="" class="header__filter-item-X">
+                <img src="https://raw.githubusercontent.com/danielmrz-dev/static-job-listings-vite/main/images/icon-remove.svg" alt="" class="header__filter-item-X">
             </button>
         </li>
         `;
