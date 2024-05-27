@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+
+:root {
+    --Desaturated-Dark-Cyan: #5ba4a4;
+    --Light-Grayish-Cyan: #effafa;
+    --Light-Grayish-Cyan : #eef6f6;
+    --Dark-Grayish-Cyan: #7b8e8e;
+    --Dark-Grayish-Cyan-shadow: #7b8e8e4e;
+    --Very-Dark-Grayish-Cyan: #2c3a3a;
+    --White: #fff;
+    --Black: #000;
+
+    --League-Spartan: "League Spartan", sans-serif;
+}
+
+body {
+    font-family: var(--League-Spartan);
+    background-color: var(--Light-Grayish-Cyan);
+}
+
+.header {
+    background-color: var(--Desaturated-Dark-Cyan);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header, .header img, .header picture {
+    width: 100%;
+    max-height: 180px;
+}
+
+.header__filter {
+    position: absolute;
+    bottom: -30px;
+    width: 87.5%;
+    max-width: 500px;
+    background-color: var(--White);
+    display: none; /* grid */
+    grid-template-columns: 1fr 70px;
+    align-items: center;
+    box-shadow: 5px 5px 15px var(--Dark-Grayish-Cyan-shadow);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.header__filter-items-container {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.header__filter-items {
+    display: flex;
+    align-items: center;
+}
+
+.header__filter-item {
+    color: var(--Desaturated-Dark-Cyan);
+    font-weight: 700;
+    background-color: var(--Light-Grayish-Cyan);
+    padding: .5rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.header__filter-item-X {
+    background-color: var(--Desaturated-Dark-Cyan);
+    color: var(--Light-Grayish-Cyan);
+    padding: .5rem;
+    border-radius: 0 5px 5px 0;
+    transition: background-color .3s ease;
+}
+
+.header__filter-item-X:hover {
+    background-color: var(--Black);
+    cursor: pointer;
+}
+
+.header__filter-clear {
+    font-size: .9rem;
+    background-color: transparent;
+    color: var(--Dark-Grayish-Cyan);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header__filter-clear:hover {
+    color: var(--Desaturated-Dark-Cyan);
+    text-decoration: underline;
+}
+
+.main {
+    margin: 4.5rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 87.5%;
+    max-width: 500px;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    
+}
+
+.job-list__item {
+    background-color: var(--White);
+    padding: 2rem 2rem 1.75rem 1.25rem;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 5px solid var(--White);
+    box-shadow: 5px 5px 15px var(--Dark-Grayish-Cyan-shadow);
+}
+
+.job-list__item-logo {
+    width: 50px;
+    position: absolute;
+    top: -25px;
+}
+
+.job-list__infos {
+    display: flex;
+    flex-direction: column;
+    gap: .95rem;
+}
+
+.job-list__item-company-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.job-list__item-company {
+    color: var(--Desaturated-Dark-Cyan);
+}
+
+.job-list__item-new, .job-list__item-featured {
+    text-transform: uppercase;
+    background-color: #5ba4a4;
+    color: var(--White);
+    padding: .45rem .65rem .25rem;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.job-list__item-new {
+    margin-left: .75rem;
+}
+
+.job-list__item-featured {
+    background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+.job-list__item-position {
+    font-weight: 700;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+
+.job-list__item-position:hover {
+    color: var(--Desaturated-Dark-Cyan);
+}
+
+.job-list__item-info-container {
+    display: flex;
+    gap: 1rem;
+    color: var(--Dark-Grayish-Cyan);
+    font-weight: 500;
+}
+
+.job-list__item-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.job-list__item-info:not(:last-child)::after {
+    content: "•";
+}
+
+hr {
+    height: 1px;
+    background-color: var(--Dark-Grayish-Cyan-shadow);
+    margin-top: .2rem;
+}
+
+.job-list__tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.job-list__tag {
+    font-family: var(--League-Spartan);
+    font-size: 1rem;
+    background-color: var(--Light-Grayish-Cyan);
+    color: var(--Desaturated-Dark-Cyan);
+    font-weight: 700;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.job-list__tag:hover {
+    color: var(--White);
+    background-color: var(--Desaturated-Dark-Cyan);    
+}
+
+/* Classes for javascript use */
+
+.border-left {
+    border-color: var(--Desaturated-Dark-Cyan);
+}
+
+.attribution {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .header__filter {
+        max-width: 1100px;
+        display: none; /* grid */
+    }
+    
+    .main {
+        margin: 4.75rem auto 8rem;
+        max-width: 1100px;
+        margin-inline: auto;
+    }
+    
+    .job-list {
+        gap: 1.8rem;
+    }
+    
+    .job-list__item {
+        padding: 1.8rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .job-list__item-logo {
+        width: 90px;
+        position: static;
+    }
+
+    .job-list__infos {
+        font-size: 1.1rem;
+        gap: .9rem;
+    }
+    
+    .job-list__item-company-container {
+        gap: .5rem;
+    }
+    
+    .job-list__item-new, .job-list__item-featured {
+        padding: .4rem .65rem .3rem;
+    }
+    
+    .job-list__item-position {
+        font-size: 1.35rem;
+    }
+    
+    hr {
+        display: none;
+    }
+    
+    .job-list__tags {
+        margin-left: auto;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+    
+    .job-list__tag {
+        font-family: var(--League-Spartan);
+        font-size: 1rem;
+        background-color: var(--Light-Grayish-Cyan);
+        color: var(--Desaturated-Dark-Cyan);
+        font-weight: 700;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+}
