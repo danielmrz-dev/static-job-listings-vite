@@ -5,7 +5,7 @@ const filterContainer = document.querySelector(".header__filter-items-container"
 const jobListContainer = document.querySelector(".job-list");
 const clearFilterBtn = document.querySelector("[data-clear]");
 
-const API = "https://gist.githubusercontent.com/danielmrz-dev/cd15c968dacc790bc1d4c742865b5108/raw/654abba65aa810ffe165ef7bb8dd5a1305e3f036/gistfile1.txt";
+const API = "https://gist.githubusercontent.com/danielmrz-dev/cd15c968dacc790bc1d4c742865b5108/raw/413416e29047a506c771a6cafe991caec867fbdb/gistfile1.txt";
 
 console.log(API);
 
